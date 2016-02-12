@@ -122,4 +122,4 @@ if (class_exists('WPBakeryVisualComposerAbstract')) {
   }
   add_action('init', 'requireVcExtend',2);
 }
-/*comm*/
+/*comme*/
