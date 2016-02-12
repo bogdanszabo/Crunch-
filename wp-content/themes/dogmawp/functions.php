@@ -124,5 +124,4 @@ if (class_exists('WPBakeryVisualComposerAbstract')) {
 }
 /*comdfcvbnm
 asdasd
-asdasda
-asd*/
+asdasda*/
