@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Crunch" />
+  <component name="PublishConfigData" serverName="Crunch" uploadOnCheckin="1a13ff33-4d73-419b-a0e4-8a9f401061a1">
+    <option name="myUploadOnCheckinName" value="Crunch" />
+  </component>
 </project>
