@@ -1425,7 +1425,7 @@ footer {
 	font-family:'futurastd-bold';
 }
 .grid-item h3:hover {
-	text-decoration:line-through;
+	/*text-decoration:line-through;*/
 }
 .grid-item span {
 	width:100%;
