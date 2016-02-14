@@ -311,6 +311,47 @@ $meta_boxes[] = array(
 /* page Type Metaboxes
 /* ----------------------------------------------------- */
 $meta_boxes[] = array(
+	'id' => 'home_page_layout_type9',
+	'title' => 'Home Page Template Video and Menu',
+	'pages' => array( 'page' ),
+	'context' => 'normal',
+
+
+	'fields' => array(
+
+		array(
+			'name'		=> 'Youtube Video ID',
+			'id'		=> $prefix . 'yid',
+			'clone'		=> false,
+			'type'		=> 'text',
+			'std'		=> '',
+			'desc'		=> 'Select Home Page Template Function <b>Video</b>. Insert Youtube Video ID Ex: eZ70TaAUhQo<br>Video not suported on mobile. If you want to use Video option, then must add featured Image. That will be your site body background on mobile device. ',
+		),
+
+		array(
+			'name'     => esc_attr__( 'Video Sound', 'dogmawp' ),
+			'id'   => $prefix . 'intro-section-video-sound',
+			'type'     => 'radio',
+			// Array of 'value' => 'Label' pairs for select box
+			'options'  => array(
+				'0' => esc_attr__( 'Enable', 'dogmawp' ),
+				'1' => esc_attr__( 'Disable', 'dogmawp' ),
+			),
+			// Select multiple values, optional. Default is false.
+			'std'         => '0',
+
+		),
+
+
+
+
+	)
+);
+
+/* ----------------------------------------------------- */
+/* page Type Metaboxes
+/* ----------------------------------------------------- */
+$meta_boxes[] = array(
 	'id' => 'home_page_layout_type7',
 	'title' => 'Home Page Template Slider & Visiable Menu Option',
 	'pages' => array( 'page' ),
