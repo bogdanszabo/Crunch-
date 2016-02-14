@@ -11,7 +11,7 @@
         <!--full-height wrap -->
         <div class="full-height-wrap">
             <div class="full-width-slider-holder">
-                <?php if(get_post_meta($post->ID,'rnr_portfolio-post-formats',true)=='portfolio'){ ?>
+
                     <!--media-container -->
                     <div class="media-container">
                         <div class="video-mask"></div>
@@ -26,7 +26,7 @@
                     </div>
                     <!--media-container end -->
                     <div class="overlay"></div>
-                <?php }?>
+
 
 
 
