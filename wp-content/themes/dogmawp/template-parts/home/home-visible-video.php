@@ -26,7 +26,22 @@
                     </div>
                     <!--media-container end -->
                     <div class="overlay"></div>
+                <!-- enter-wrap -->
+                <div class="enter-wrap-holder">
+                    <div class="enter-wrap">
+                        <?php if (( get_post_meta($post->ID,'rnr_home_content',true))):?>
+                            <h3> <?php echo balanceTags(get_post_meta($post->ID,'rnr_home_content',true)); ?></h3>
+                        <?php endif;?>
 
+                        <?php if (( get_post_meta($post->ID,'rnr_home_bt_url',true))):?>
+                            <a href="<?php echo esc_attr(get_post_meta($post->ID,'rnr_home_bt_url',true)); ?>" class="ajax btn anim-button   trans-btn   transition wr-multi-button  fl-l"><span><?php if (( get_post_meta($post->ID,'rnr_home_bt_txt',true))):?><?php echo esc_attr(get_post_meta($post->ID,'rnr_home_bt_txt',true)); ?><?php else:?><?php esc_attr_e('Enter site','dogmawp');?><?php endif;?></span><i class="fa fa-long-arrow-right"></i></a>
+                        <?php endif;?>
+                        <?php if (( get_post_meta($post->ID,'rnr_home_bt_url2',true))):?>
+                            <a href="<?php echo esc_attr(get_post_meta($post->ID,'rnr_home_bt_url2',true)); ?>" class="ajax btn anim-button   trans-btn  wr-multi-button transition "><span><?php if (( get_post_meta($post->ID,'rnr_home_bt_txt2',true))):?><?php echo esc_attr(get_post_meta($post->ID,'rnr_home_bt_txt2',true)); ?><?php else:?><?php esc_attr_e('Enter site','dogmawp');?><?php endif;?></span><i class="fa fa-long-arrow-right"></i></a>
+                        <?php endif;?>
+                    </div>
+                </div>
+                <!-- enter-wrap end  -->
 
 
 
