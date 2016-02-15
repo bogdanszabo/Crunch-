@@ -63,7 +63,7 @@ $pagebg_type_array = array(
 
 
 /* ----------------------------------------------------- */
-/* page Type Metaboxes
+/* page Type Metaboxess
 /* ----------------------------------------------------- */
 $meta_boxes[] = array(
 	'id' => 'home_page_type',
@@ -89,7 +89,7 @@ $meta_boxes[] = array(
 				'st6' => __( get_template_directory_uri().'/includes/metaboxes/img/home-sin-img.png', 'dogmawp' ),
 				'st7' => __( get_template_directory_uri().'/includes/metaboxes/img/home-sin-slider.png', 'dogmawp' ),
 				'st8' => __( get_template_directory_uri().'/includes/metaboxes/img/home-sin-vmenu.png', 'dogmawp' ),
-				'st9' => __( get_template_directory_uri().'/includes/metaboxes/img/home-sin-vmenu.png', 'dogmawp' ),
+				'st9' => __( get_template_directory_uri().'/includes/metaboxes/img/home-vid-vmenu.png', 'dogmawp' ),
 				
 				
 			),
