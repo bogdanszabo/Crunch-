@@ -25,7 +25,7 @@
 </head>
 <body <?php body_class(); ?>>
 <div class="loader">
-    <img src="wp-content/themes/dogmawp/includes/metaboxes/img/final2.gif">
+    <img src="http://www.wearecrunch.net/newsite/wp-content/themes/dogmawp/includes/metaboxes/img/final2.gif">
 
 </div>
 <!--================= main start ================-->
