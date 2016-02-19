@@ -964,4 +964,4 @@ try {
 <?php
 login_footer();
 break;
-} // end action switch
+} // end action switch egfsd
