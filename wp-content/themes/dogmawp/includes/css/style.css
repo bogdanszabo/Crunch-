@@ -577,7 +577,7 @@ header {
 .enter-wrap-holder {
 	position:absolute;
 	top:50%;
-	left:30%;
+	left:50%;
 	width:350px;
 	margin-left:-175px;
 	z-index:10;
