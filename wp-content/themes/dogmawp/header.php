@@ -40,7 +40,7 @@
         </div>
         <!-- Nav button end -->
         <!-- Logo-->
-        <div class="logo-holder">
+        <div id="logo" class="logo-holder">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="ajax"><img src="<?php echo esc_url(AfterSetupTheme::return_thme_option('logopic','url'));?>" alt=""></a>
         </div>
         <!-- Logo  end-->
