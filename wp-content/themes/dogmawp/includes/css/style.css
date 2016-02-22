@@ -2427,3 +2427,6 @@ article {
 	background-position:center;
 }
 }
+.home #logo{
+	display:none;
+}
