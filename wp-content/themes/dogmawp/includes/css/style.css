@@ -1287,6 +1287,8 @@ footer {
 	font-size:12px;
 	text-transform:uppercase;
 	position:relative;
+	font-family:'Nunito';
+	color:#1f1b1c;
 }
 .wh-info-box:before {
 	content:'';
