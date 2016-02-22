@@ -2049,6 +2049,8 @@ article {
 	font-family:'futurastd-bold';
 	text-transform:uppercase;
 	margin-bottom:10px;
+}
+.blog-text h3 a{
 	color:#1f1b1c;
 }
 .project-details h3 {
