@@ -1392,6 +1392,7 @@ footer {
 	padding:15px 20px;
 }
 .filter-vis-line  .gallery-filters a {
+	color:#1f1b1c;
 	float:left;
 	margin-right:20px;
 	font-size:11px;
@@ -1400,7 +1401,7 @@ footer {
 	text-align:left;
 	letter-spacing:1px;
 	font-weight:bold;
-	font-family:'futurastd-bold';
+	font-family:'Nunito';
 	-webkit-transition: all 4000ms cubic-bezier(.19,1,.22,1) 0ms;
   	-moz-transition: all 4000ms cubic-bezier(.19,1,.22,1) 0ms;
   	transition: all 4000ms cubic-bezier(.19,1,.22,1) 0ms;
