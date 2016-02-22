@@ -1272,8 +1272,9 @@ footer {
 }
 .wh-info-box a {
 	font-size:18px;
-	font-family:'futurastd-bold';
+	font-family:'Nunito';
 	text-transform:uppercase;
+	color:#1f1b1c;
 }
 .wh-info-box a:hover {
 	/*text-decoration:line-through;*/
