@@ -23,11 +23,11 @@ class arvlbFPPL
 
 
       ?><div style="display:none">
-  <div id="arvlbdata" style="overflow:visible;width:400px;height:250px;">
+  <div id="arvlbdata" style="overflow:visible;width:350px;height:219px;">
   <?php if (!empty($o['mab'])) {
     echo $o['mab'];
   } ?>
-    <div allowtransparency="true" style="overflow:hidden;width:400px;height:250px;" class="fb-page" 
+    <div allowtransparency="true" style="overflow:hidden;width:350px;height:219px;" class="fb-page"
       data-href="<?php 
 
       if (!empty($o['fb_id']) && is_numeric($o['fb_id'])){
@@ -39,11 +39,11 @@ class arvlbFPPL
         }
       } 
       ?>"
-      data-width="400" 
-      data-height="250" 
+      data-width="350"
+      data-height="219"
 
       data-small-header="false" 
-      data-adapt-container-width="false" 
+      data-adapt-container-width="true"
       data-hide-cover="false"
       data-show-facepile="true" 
       data-show-posts="false">
@@ -156,8 +156,8 @@ class arvlbSHARED{
    */
   public static function normalize($o){
     $checks = array(
-   'width'		   => '400',
-   'height'		  => '255',
+   'width'		   => '350',
+   'height'		  => '224',
    'delay'		   => '0',
    'coc'        => '0',
    'fb_id'		   => '' ,
