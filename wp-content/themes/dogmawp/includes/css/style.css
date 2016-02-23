@@ -502,7 +502,6 @@ header {
 }
 .nav-inner nav li a:hover{
 	color:#f3601d;
-	margin-left:4px;
 }
 .nav-inner nav li a.active {
 	color:#ccc;
