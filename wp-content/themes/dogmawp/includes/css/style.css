@@ -500,6 +500,9 @@ header {
 	letter-spacing:2px;
 	font-weight:700;
 }
+.nav-inner nav li a:hover{
+	color:#f3601d;
+}
 .nav-inner nav li a.active {
 	color:#ccc;
 }
@@ -2436,4 +2439,11 @@ article {
 }
 .home #logo{
 	display:none;
+}
+.wpmlpos {
+	position:absolute;
+	top:19px;
+	right:50px;
+	z-index:21;
+	cursor:pointer;
 }
