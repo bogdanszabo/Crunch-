@@ -50,7 +50,6 @@
             </div>
             <!--  content-nav end-->
             <h3><?php the_title();?></h3>
-            <div class="separator"></div>
             <div class="clearfix"></div>
             <?php if(have_posts()) : while ( have_posts() ) : the_post();?>
                 <?php the_content();?>
@@ -59,7 +58,7 @@
                 <!---->
             <?php }
             else { ?>
-                <h4><?php esc_attr_e('Info','dogmawp');?></h4>
+                <h4 style="color:gray;"><?php esc_attr_e('Info','dogmawp');?></h4>
                 <ul class="project-details">
                     <li><span><?php esc_attr_e('Date :','dogmawp');?></span> <?php the_time('d.m.Y') ?> </li>
                     <?php $wr_values =  rwmb_meta(
