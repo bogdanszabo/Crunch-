@@ -1256,6 +1256,7 @@ footer {
 	z-index:3;
 	overflow:hidden;
 	visibility:hidden;
+	cursor:pointer;
 }
 .wh-info-box-inner {
 	position:relative;
@@ -1394,7 +1395,7 @@ footer {
 }
 .filter-vis-line  .gallery-filters {
 	float:left;
-	background:#fff;
+	background: none;
 	padding:15px 20px;
 }
 .filter-vis-line  .gallery-filters a {
