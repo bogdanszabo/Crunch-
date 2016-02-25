@@ -61,7 +61,7 @@
 												echo esc_html($excerpt);
 												?>..
                                                 </p>
-                                                <a href="<?php the_permalink();?>" class="ajax btn anim-button   trans-btn   transition  fl-l" target="_blank"><span><?php esc_attr_e('read  more','dogmawp');?></span><i class="fa fa-eye"></i></a>
+                                                <a href="<?php the_permalink();?>" class="ajax btn anim-button   trans-btn   transition  fl-l" target="_blank"><span><?php esc_attr_e('read  more','dogmawp');?></span><i class="fa fa-long-arrow-right"></i></a>
                                             </div>
                                         </article>
                                     </div>
