@@ -77,7 +77,7 @@
                 </ul>
             <?php } ?>
             <?php if (( get_post_meta($post->ID,'rnr_pt_button_url',true))):?>
-                <a href="<?php echo esc_attr(get_post_meta($post->ID,'rnr_pt_button_url',true)); ?>" class=" btn anim-button   trans-btn   transition  fl-l" target="_blank"><span><?php echo esc_attr(get_post_meta($post->ID,'rnr_pt_button_text',true)); ?></span><i class="fa fa-eye"></i></a>
+                <a href="<?php echo esc_attr(get_post_meta($post->ID,'rnr_pt_button_url',true)); ?>" class=" btn anim-button   trans-btn   transition  fl-l" target="_blank"><span><?php echo esc_attr(get_post_meta($post->ID,'rnr_pt_button_text',true)); ?></span><i class="fa fa-long-arrow-right"></i></a>
             <?php endif;?>
         </div>
         <!--  fixed-info-container  end-->
