@@ -2457,6 +2457,6 @@ article {
 .case-title{
 	height:70px;
 }
-.cases:hover{
+.cases a h4:hover{
 	color:#f3601d;
 }

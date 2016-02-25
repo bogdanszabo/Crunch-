@@ -21,8 +21,8 @@
                     <?php }?>
                     <?php if(!empty($wr_options['portfoliolink'])):?>
                         <li>
-                            <div>
-                                <a href="<?php echo esc_url($wr_options['portfoliolink']);?>" class="ajax cases">
+                            <div class="cases">
+                                <a href="<?php echo esc_url($wr_options['portfoliolink']);?>" class="ajax">
                                             <h4>
                                             Cases
                                             </h4></a>
