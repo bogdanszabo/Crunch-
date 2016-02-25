@@ -1282,7 +1282,7 @@ footer {
 }
 .wh-info-box a:hover {
 	/*text-decoration:line-through;*/
-	color:#f3601d;
+	opacity:0.7;
 }
 .wh-info-box span {
 	width:100%;
