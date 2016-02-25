@@ -2454,3 +2454,6 @@ article {
 	z-index:21;
 	cursor:pointer;
 }
+.case-title{
+	height:40px;
+}

@@ -49,7 +49,7 @@
                 </ul>
             </div>
             <!--  content-nav end-->
-            <h3><?php the_title();?></h3>
+            <div class="case-title"></div><h3><?php the_title();?></h3></div>
             <div class="clearfix"></div>
             <?php if(have_posts()) : while ( have_posts() ) : the_post();?>
                 <?php the_content();?>
