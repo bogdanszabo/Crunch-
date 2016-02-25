@@ -1755,7 +1755,9 @@ footer {
 	width:100%;
 	margin-bottom:10px;
 	position:relative;
-	font-size:14px;
+	font-size:13px;
+	line-height:15px;
+	color: gray;
 }
 .show-info {
 	position:absolute;
