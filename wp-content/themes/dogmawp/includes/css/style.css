@@ -1418,7 +1418,7 @@ footer {
 }
 
 .filter-vis-line  .gallery-filters a.gallery-filter-active , .filter-vis-line  .gallery-filters a:hover {
-	opacity:0.4;
+	color:#f3601d;
 }
 .grid-item {
 	position:relative;
