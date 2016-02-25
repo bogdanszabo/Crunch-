@@ -2457,3 +2457,6 @@ article {
 .case-title{
 	height:70px;
 }
+.cases:hover{
+	color:#f3601d;
+}
