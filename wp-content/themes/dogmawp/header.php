@@ -49,6 +49,7 @@
             <h2><a class="ajax" href="#"></a></h2>
         </div>
         <!-- Header  title  end-->
+        <div class="wpmlpos"><?php do_action('wpml_add_language_selector'); ?></div>
         <?php if ($wr_options['showshare']=="yes") {?>
             <!-- share -->
             <div class="show-share isShare">

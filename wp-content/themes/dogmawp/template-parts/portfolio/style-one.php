@@ -40,7 +40,7 @@
                                 <div class="gallery-item <?php echo (get_post_meta($post->ID,'rnr_post-box-width',true)) ?> <?php echo esc_attr($item->slug . ' ');?>">
                                     <div class="grid-item-holder">
                                         <div class="box-item">
-                                            <div class="wh-info-box">
+                                            <div class="wh-info-box" onclick="window.location='<?php the_permalink();?>';">
                                                 <div class="wh-info-box-inner at">
                                                     <a href="<?php the_permalink();?>" class="ajax">
                                                     <?php the_title();?>                                                
