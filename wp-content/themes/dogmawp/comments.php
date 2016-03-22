@@ -1,8 +1,5 @@
 <?php
-
-
-
-
+	define('DOING_AJAX',1);
 	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 		die ('Please do not load this page directly. Thanks!');
 
@@ -12,6 +9,15 @@
 		return;
 	}
 ?>
+
+<style>
+	.validation{
+		display: block;
+		visibility: hidden;
+		color: red;
+		font-size: 17px;
+	}
+</style>
 
 <!-- You can start editing here. -->
 
@@ -68,6 +74,7 @@
 
 <form action="<?php echo esc_url(site_url()); ?>/wp-comments-post.php" method="post" id="commentform" class="contact-form">
 
+<span id="error" class="validation"></span>
 
 <?php if ( is_user_logged_in() ) : ?>
 
@@ -76,17 +83,16 @@
 <?php else : ?>
 
 
-
-<input class="form-control"  onClick="this.select()" value="<?php esc_attr_e('Name','dogmawp'); ?>"  type="text" name="author" id="author"  size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-
-
-
-<input class="form-control"  onClick="this.select()" value="<?php esc_attr_e('Website','dogmawp'); ?>" type="text" name="url" id="url" size="22" tabindex="3" />
+<input class="form-control"  onClick="this.select()" value="<?php esc_attr_e('Name','dogmawp'); ?>"  type="text" name="author" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+<span id="author" class="validation">Author is required</span>
 
 
+<input class="form-control"  onClick="this.select()" value="<?php esc_attr_e('Website','dogmawp'); ?>" type="text" name="url" size="22" tabindex="3" />
+<span id="url" class="validation">Url is required</span>
 
-<input class="form-control"  onClick="this.select()" value="<?php esc_attr_e('Email','dogmawp'); ?>" type="text" name="email" id="email" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
 
+<input class="form-control"  onClick="this.select()" value="<?php esc_attr_e('Email','dogmawp'); ?>" type="text" name="email" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+<span id="email" class="validation">Website is required</span>
 
 
 
@@ -95,8 +101,8 @@
 
 
 
-<textarea class="form-control" rows="3" name="comment" id="comment" cols="100" tabindex="4" onClick="this.select()"><?php esc_attr_e('Message','dogmawp'); ?></textarea>
-
+<textarea class="form-control" rows="3" name="comment" cols="100" tabindex="4" onClick="this.select()"><?php esc_attr_e('Message','dogmawp'); ?></textarea>
+<span id="comment" class="validation">Comment is required</span>
 
 
 <button name="submit" type="submit" id="submit" tabindex="5" value="" ><span><?php esc_attr_e('Post','dogmawp'); ?> </span> <i class="fa fa-long-arrow-right"></i></button>
@@ -111,6 +117,62 @@
 </div>
 </div>
 
+<script type="text/javascript">
+	// Assign handlers immediately after making the request,
+	// and remember the jqxhr object for this request
+	var response;
+	var fields = ["author", "email", "url", "comment"];
+	var defValues = ["Name", "Email", "Website", "Message"];
+	jQuery(function($) {
+	$('document').ready(function(){
+		// process the form
+		$('form').submit(function(event) {
+			// stop the form from submitting the normal way and refreshing the page
+			event.preventDefault();
+			invalid = false
+			for(var field in fields){
+				if($('[name='+fields[field]+']') && ($('[name='+fields[field]+']').val() == defValues[field] || $('[name='+fields[field]+']').val() == "")){
+					$("#"+fields[field]).css({"visibility":"visible"});
+					invalid = true;
+				}else{
+					$("#"+fields[field]).css({"visibility":"hidden"});
+				}
+			}
+			if(invalid)
+				return;
+			// get the form data
+			// there are many ways to get this data using jQuery (you can use the class or id also)
+			var formData = $('form').serialize() 
+
+			// process the form
+			$.ajax({
+				type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+				url         : "<?php echo esc_url(site_url()); ?>/wp-comments-post.php", // the url where we want to POST
+				data        : formData, // our data object
+				dataType    : 'json', // what type of data do we expect back from the server
+				encode      : true,
+				statusCode: {
+					200: function() {
+						$( "#error" ).empty();
+						$( "#error" ).css({"color":"green"});
+						$( "#error" ).text("Comment succesfully posted");
+						setTimeout(function() {
+							$("#error").css({"visibility":"hidden"});
+							$("#error").css({"color":"red"});
+						}, 10000);
+						
+					}
+				}
+			}).fail(function(html) {
+				response = html;
+				$( "#error" ).empty();
+				$( "#error" ).append(jQuery(response.responseText.match('(<p[^>]*>.*?</p>)')[0]).html());
+				$("#error").css({"visibility":"visible"});
+			  })
+		});
+	});
+});
+</script>
 <?php endif; // If registration required and not logged in ?>
 
 <?php endif; // if you delete this the sky will fall on your head ?>
