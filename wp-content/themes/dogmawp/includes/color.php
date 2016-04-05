@@ -13,7 +13,11 @@ function mt_custom_colors() {
  <?php endif;?>
  </style>
  
+<<<<<<< HEAD
  
+=======
+ /* 123 */
+>>>>>>> 33e717b10ec03a896919932018203db7a02ccde6
  <?php 
 	}
 ?>

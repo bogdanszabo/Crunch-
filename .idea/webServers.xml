@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="81e653af-9ab3-4c65-b93f-1e7aea7c4479" name="Crunch Local" url="http://localhost/CrunchLocal">
+        <fileTransfer mountedRoot="C:\xampp\htdocs\CrunchLocal" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
