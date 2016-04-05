@@ -1,4 +1,3 @@
-test
 <?php
 	define('DOING_AJAX',1);
 	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
