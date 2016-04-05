@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-test
-=======
->>>>>>> 33e717b10ec03a896919932018203db7a02ccde6
 <?php
 	define('DOING_AJAX',1);
 	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))

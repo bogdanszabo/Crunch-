@@ -2,19 +2,19 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-<<<<<<< HEAD
+
 RewriteBase /crunch/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /crunch/index.php [L]
-=======
+
 RewriteBase /newsite/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /newsite/index.php [L]
->>>>>>> 33e717b10ec03a896919932018203db7a02ccde6
+
 </IfModule>
 
 # END WordPress
