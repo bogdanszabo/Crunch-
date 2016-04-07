@@ -964,8 +964,4 @@ try {
 <?php
 login_footer();
 break;
-<<<<<<< HEAD
 } // end action switch
-=======
-} // end action switch egfsd
->>>>>>> 33e717b10ec03a896919932018203db7a02ccde6
