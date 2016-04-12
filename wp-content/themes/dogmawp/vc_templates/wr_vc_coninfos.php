@@ -21,7 +21,7 @@ $html .= '<ul class="contact-list">';
 $html .= do_shortcode($content);
 $html .= '</ul>';
 if($contf != '') {
-$html .= '<a href="#" class=" btn anim-button   trans-btn   transition  fl-l showform"><span>'.$buttontext.'</span><i class="fa fa-eye"></i></a>';
+$html .= '<a href="#" class=" btn anim-button   trans-btn   transition  fl-l showform"><span>'.$buttontext.'</span><i class="fa fa-long-arrow-right"></i></a>';
 }
 $html .= '</div>';
 $html .= '</section>';
