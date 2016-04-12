@@ -27,6 +27,7 @@
 									<?php if(get_post_meta($post->ID,'rnr_bl-video',true)):?>
                                         <div class="custom-slider-holder">
                                            <div class="resp-video">
+
                                             
                                              </div>
                                         </div>
