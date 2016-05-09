@@ -821,6 +821,7 @@ header {
 .contact-list li a {
 	font-size:14px;
 	letter-spacing:1px;
+	color: #000000;
 }
 .contact-list li a:hover {
 	/*text-decoration:line-through;*/
