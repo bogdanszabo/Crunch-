@@ -20,16 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'crunch');
+define( 'DB_NAME', 'crunchDB4jidx' );
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define( 'DB_USER', 'crunchDB4jidx' );
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define( 'DB_PASSWORD', 'N0yNeb9HCn' );
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define( 'DB_HOST', '127.0.0.1' );
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
@@ -63,7 +63,7 @@ define('NONCE_SALT',       'c,]}.qA]lx)2bP~lB*z,Kixwtc9I<6GhS!+~I4C<x0A@suRh-B]u
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix = 'wp_crunch_';
 
 /**
  * For developers: WordPress debugging mode.

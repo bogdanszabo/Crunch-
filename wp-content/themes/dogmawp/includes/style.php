@@ -7,6 +7,7 @@ wp_enqueue_style('reset', get_template_directory_uri() . '/includes/css/reset.cs
 wp_enqueue_style('plugins', get_template_directory_uri() . '/includes/css/plugins.css');
 wp_enqueue_style('style', get_template_directory_uri() . '/includes/css/style.css');
 wp_enqueue_style('yourstyle', get_template_directory_uri() . '/includes/css/yourstyle.css');
+wp_enqueue_style('js_composer_front-css', get_template_directory_uri() . '/includes/css/js_composer.min.css');
 }
 add_action('wp_enqueue_scripts', 'dogma_wp_style');
 function dogma_enqueue_custom_admin_style() {

@@ -13,7 +13,7 @@ function mt_custom_colors() {
  <?php endif;?>
  </style>
  
-
+ 
  <?php 
 	}
 ?>

@@ -91,7 +91,7 @@ function initDogma() {
             var a = jQuery(".gallery-items").isotope({
                 singleMode: true,
                 columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
-                itemSelector: ".gallery-item, .gallery-item-second, .gallery-item-three",
+                itemSelector: ".gallery-item, .gallery-item-second, .gallery-item-three, .product",
                 transformsEnabled: true,
                 transitionDuration: "700ms"
             });
@@ -295,8 +295,8 @@ function initDogma() {
         cursorcolor: "#ccc",
         autohidemode: true,
         bouncescroll: false,
-        scrollspeed: 20,
-        mousescrollstep: 20,
+        scrollspeed: 120,
+        mousescrollstep: 90,
         grabcursorenabled: false,
         horizrailenabled: true,
 		preservenativescrolling: true,
@@ -370,14 +370,7 @@ function initDogma() {
     });
 	jQuery(".nav-button").attr("onclick","return true");
     jQuery("nav li.subnav ").append('<i class="fa fa-angle-double-down subnavicon"></i>');
-    jQuery(".nav-inner nav li").on("mouseenter", function() {
-        jQuery(this).find("ul").stop().slideDown();
-        jQuery(".nav-inner").addClass("menhov");
-    });
-    jQuery(".nav-inner nav li").on("mouseleave", function() {
-        jQuery(this).find("ul").stop().slideUp();
-        jQuery(".nav-inner").removeClass("menhov");
-    });
+   
     function hideShare() {
         jQuery(".share-inner").removeClass("visshare");
         jQuery(".show-share").addClass("isShare");
@@ -488,22 +481,6 @@ function initDogma() {
     });
 // Init your functions here ------------------
 jQuery('#s').attr('placeholder','Type and hit enter...');
-jQuery(".wr-widget-main li a").each(function(i){
-jQuery(this).addClass('ajax');
-})
-jQuery(".widget_tag_cloud a").each(function(i){
-jQuery(this).addClass('ajax');
-})
-jQuery(".taglist a").each(function(i){
-jQuery(this).addClass('ajax');
-})
-jQuery(".comment-reply-link").each(function(i){
-jQuery(this).addClass('ajax');
-})
-
-jQuery(".nav-inner nav li a").each(function(i){
-jQuery(this).addClass('ajax');
-})
 jQuery('.wr-contact .full_section_inner > *').unwrap();
 jQuery('.wr-contact .wpb_row > *').unwrap();
 jQuery('.wr-contact .wpb_column > *').unwrap();
@@ -514,6 +491,9 @@ jQuery('.wr-contact .row > *').unwrap();
 jQuery('title').text(function(index,text){
     return text.replace('&#8211;','-');
 });
+jQuery(".dogma-pro-sidebar a.ajax").each(function(i){
+jQuery(this).removeClass('ajax');
+})
 
 }
 
@@ -581,10 +561,16 @@ jQuery(function() {
 });
 function initmap () {
 }
+function initajaxload () {
+}
+function initmenytype () {
+}
 
 // Init all functions  ------------------
 function readyFunctions() {
     initDogma();
     initvideo();
     initmap ();
+    initajaxload ();
+    initmenytype ();
 }

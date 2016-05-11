@@ -382,7 +382,7 @@ vc_map( array(
 		)
 ) );
 
-// wr Image & Text
+// wr about
 vc_map( array(
 		"name" => "WR ABout",
 		"base" => "wr_about",
@@ -430,6 +430,21 @@ vc_map( array(
 				"class" => "",
 				"heading" => "Button Text",
 				"param_name" => "buttontext",
+				"description" => "",
+				
+			),
+			
+			array(
+				"type" => "dropdown",
+				"holder" => "div",
+				"class" => "",
+				"heading" => "URL Type",
+				"param_name" => "urltype",
+				"value" => array(
+					"URL From Own Site" => "st1",
+					"URL From Other Site" => "st2",	
+					
+				),
 				"description" => "",
 				
 			),

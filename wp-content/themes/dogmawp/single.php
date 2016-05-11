@@ -21,16 +21,13 @@
                                         <li> - </li>
                                         <li><a href="#" class="tag"><?php the_category(', ') ?> </a></li>
                                     </ul>
-
                                     <!--  blog-media  --> 
                                     <div class="blog-media">
 									<?php if( has_post_format( 'video' ) !='') :?>
 									<?php if(get_post_meta($post->ID,'rnr_bl-video',true)):?>
                                         <div class="custom-slider-holder">
                                            <div class="resp-video">
-
-
-                                            
+                                             <iframe src="<?php echo esc_url(get_post_meta($post->ID,'rnr_bl-video',true));?>"></iframe>
                                              </div>
                                         </div>
 									<?php endif;?>
@@ -49,8 +46,7 @@
                                                 </div>
 											<!-- image end -->
 										   ";
-											 };
-                                            ?>
+											 };?>
                                                 
 												
                                                 
@@ -132,7 +128,6 @@
                     </div>
                     <!--  Content  end --> 
                     <?php get_template_part('template-parts/social-share');?>
-                    
                 </div>
                 <!-- Content holder  end -->
 <?php get_footer(); ?> 

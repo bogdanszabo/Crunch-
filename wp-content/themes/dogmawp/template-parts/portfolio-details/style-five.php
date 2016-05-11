@@ -57,13 +57,18 @@
                             <?php if(have_posts()) : while ( have_posts() ) : the_post();?>
                             <?php the_content();?>
 							<?php endwhile;  endif; wp_reset_postdata(); ?>
-							<?php if(get_post_meta($post->ID,'rnr_wr-infor-dis',true)=='st2'){ ?> 
-                            <!---->
-							<?php }
-							else { ?>
-                            <h4><?php esc_attr_e('Info','dogmawp');?></h4>
+							<h4><?php esc_attr_e('Info','dogmawp');?></h4>
                             <ul class="project-details">
+								<?php if(get_post_meta($post->ID,'rnr_wr-infor-date',true)=='st2'){ ?> 
+								<!---->
+								<?php }
+								else { ?>
                                 <li><span><?php esc_attr_e('Date :','dogmawp');?></span> <?php the_time('d.m.Y') ?> </li>
+								<?php } ?>
+								<?php if(get_post_meta($post->ID,'rnr_wr-infor-dis',true)=='st2'){ ?> 
+								<!---->
+								<?php }
+								else { ?>
                                 <?php $wr_values =  rwmb_meta(
 								 'rnr_pt_client', 
 								 $args = array(
@@ -76,8 +81,8 @@
 								echo balanceTags($value) ;
 								}
 								};?>
-                            </ul>
-							<?php } ?>
+								<?php } ?>
+                            </ul> 
                             <?php if (( get_post_meta($post->ID,'rnr_pt_button_url',true))):?>
                             <a href="<?php echo esc_attr(get_post_meta($post->ID,'rnr_pt_button_url',true)); ?>" class=" btn anim-button   trans-btn   transition  fl-l" target="_blank"><span><?php echo esc_attr(get_post_meta($post->ID,'rnr_pt_button_text',true)); ?></span><i class="fa fa-eye"></i></a>
 						    <?php endif;?>

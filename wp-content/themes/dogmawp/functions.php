@@ -108,6 +108,20 @@ function dogma_theme_slug_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'dogma_theme_slug_widgets_init' );
+if(function_exists("is_woocommerce")){
+function dogma_theme_slug_widgets__init() {
+    register_sidebar( array(
+        'name' => esc_attr__( 'WOOCOMMERCE Sidebar', 'dogmawp' ),
+        'id' => 'sidebar-2',
+        'description' => esc_attr__( 'This area for All WOOCOMMERCE Widget', 'dogmawp' ),
+        'before_widget' => '<div id="%1$s" class="widget grid-item-holder wr-woo-widget wr-widget-main %2$s"><article>',
+		'after_widget'  => '</article></div>', 
+		'before_title'  => '<ul class="blog-title"><li>', 
+		'after_title'   => '</li></ul>'
+    ) );
+}
+add_action( 'widgets_init', 'dogma_theme_slug_widgets__init' );
+}
 }
 /* Include Meta Box Framework */
 define( 'RWMB_URL', trailingslashit( get_template_directory_uri() . '/includes/metaboxes' ) );
@@ -122,4 +136,18 @@ if (class_exists('WPBakeryVisualComposerAbstract')) {
   }
   add_action('init', 'requireVcExtend',2);
 }
-/*comme*/
+
+/* CHECK WOOCOMMERCE IS ACTIVE
+  ================================================== */ 
+  if ( ! function_exists( 'dogma_woocommerce_activated' ) ) {
+    function dogma_woocommerce_activated() {
+      if ( class_exists( 'woocommerce' ) ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+add_theme_support( 'woocommerce' );
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);

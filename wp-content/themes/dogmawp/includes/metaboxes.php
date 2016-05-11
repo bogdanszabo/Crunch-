@@ -63,7 +63,7 @@ $pagebg_type_array = array(
 
 
 /* ----------------------------------------------------- */
-/* page Type Metaboxess
+/* page Type Metaboxes
 /* ----------------------------------------------------- */
 $meta_boxes[] = array(
 	'id' => 'home_page_type',
@@ -89,7 +89,7 @@ $meta_boxes[] = array(
 				'st6' => __( get_template_directory_uri().'/includes/metaboxes/img/home-sin-img.png', 'dogmawp' ),
 				'st7' => __( get_template_directory_uri().'/includes/metaboxes/img/home-sin-slider.png', 'dogmawp' ),
 				'st8' => __( get_template_directory_uri().'/includes/metaboxes/img/home-sin-vmenu.png', 'dogmawp' ),
-				'st9' => __( get_template_directory_uri().'/includes/metaboxes/img/home-vid-vmenu.png', 'dogmawp' ),
+				
 				
 				
 			),
@@ -128,6 +128,20 @@ $meta_boxes[] = array(
 		),
 		
 		array(
+			'name'     => esc_attr__( 'Link Option', 'dogmawp' ),
+			'id'   => $prefix . 'intro-link-option1',
+			'type'     => 'radio',
+			// Array of 'value' => 'Label' pairs for select box
+			'options'  => array(
+				'ajax' => esc_attr__( 'Url From Own site', 'dogmawp' ),
+				'noajax' => esc_attr__( 'Url From Other site', 'dogmawp' ),
+			),
+			// Select multiple values, optional. Default is false.
+			'std'         => 'ajax',
+
+		),	
+		
+		array(
 			'name'		=> 'Button Text',
 			'id'		=> $prefix . 'home_bt_txt2',
 			'clone'		=> false,
@@ -143,6 +157,20 @@ $meta_boxes[] = array(
 			'type'		=> 'text',
 			'std'		=> '',
 			'desc'		=> '',
+		),
+		
+		array(
+			'name'     => esc_attr__( 'Link Option', 'dogmawp' ),
+			'id'   => $prefix . 'intro-link-option2',
+			'type'     => 'radio',
+			// Array of 'value' => 'Label' pairs for select box
+			'options'  => array(
+				'ajax' => esc_attr__( 'Url From Own site', 'dogmawp' ),
+				'noajax' => esc_attr__( 'Url From Other site', 'dogmawp' ),
+			),
+			// Select multiple values, optional. Default is false.
+			'std'         => 'ajax',
+
 		),
 		
 	
@@ -311,47 +339,6 @@ $meta_boxes[] = array(
 /* page Type Metaboxes
 /* ----------------------------------------------------- */
 $meta_boxes[] = array(
-	'id' => 'home_page_layout_type9',
-	'title' => 'Home Page Template Video and Menu',
-	'pages' => array( 'page' ),
-	'context' => 'normal',
-
-
-	'fields' => array(
-
-		array(
-			'name'		=> 'Youtube Video ID',
-			'id'		=> $prefix . 'yid',
-			'clone'		=> false,
-			'type'		=> 'text',
-			'std'		=> '',
-			'desc'		=> 'Select Home Page Template Function <b>Video</b>. Insert Youtube Video ID Ex: eZ70TaAUhQo<br>Video not suported on mobile. If you want to use Video option, then must add featured Image. That will be your site body background on mobile device. ',
-		),
-
-		array(
-			'name'     => esc_attr__( 'Video Sound', 'dogmawp' ),
-			'id'   => $prefix . 'intro-section-video-sound',
-			'type'     => 'radio',
-			// Array of 'value' => 'Label' pairs for select box
-			'options'  => array(
-				'0' => esc_attr__( 'Enable', 'dogmawp' ),
-				'1' => esc_attr__( 'Disable', 'dogmawp' ),
-			),
-			// Select multiple values, optional. Default is false.
-			'std'         => '0',
-
-		),
-
-
-
-
-	)
-);
-
-/* ----------------------------------------------------- */
-/* page Type Metaboxes
-/* ----------------------------------------------------- */
-$meta_boxes[] = array(
 	'id' => 'home_page_layout_type7',
 	'title' => 'Home Page Template Slider & Visiable Menu Option',
 	'pages' => array( 'page' ),
@@ -507,6 +494,45 @@ $meta_boxes[] = array(
 			'multiple'    => false,
 			'std'         => 'st1',
 			'placeholder' => esc_attr__( 'Select an Option', 'dogmawp' ),
+		),
+		
+		array(
+		   'name'     => esc_attr__( 'Portfolio Filter', 'mountainwp' ),
+		   'id'   => $prefix . 'port-filter',
+		   'desc' => 'Not working on Portfolio Style2, Style3 & Style 6',
+		   'type'     => 'radio',
+		   // Array of 'value' => 'Label' pairs for select box
+		   'options'  => array(
+			'yes' => esc_attr__( 'Enable', 'mountainwp' ),
+			'no' => esc_attr__( 'Disable', 'mountainwp' ),
+		   ),
+		   // Select multiple values, optional. Default is false.
+		   'std'         => 'yes',
+
+		  ),
+		  
+		  array(
+				'name'       => esc_attr__( 'Number Of Post Show', 'blps' ),
+				'id'         => $prefix . 'portfolio-post-show',
+				'desc'		=> 'Working Only If Filter Option Disable. <br> <br> Not working on Portfolio Style2, Style3 & Style 6',
+				'type'       => 'slider',
+				// Text labels displayed before and after value
+				'prefix'     => __( '', 'blps' ),
+				'suffix'     => __( ' Posts', 'blps' ),
+				'js_options' => array(
+					'min'  => 1,
+					'max'  => 100,
+					'step' => 1,
+				),
+			),	
+
+			array(
+			'name'		=> 'Exclude Category',
+			'id'		=> $prefix . 'portfolio-post-cat',
+			'desc'		=> 'Enter category name ex: web design, web development (Optional).<br>Working Only If Filter Option  Disable. <br> Not working on Portfolio Style2, Style3 & Style 6',
+			'clone'		=> false,
+			'type'		=> 'text',
+			'std'		=> ''
 		),
 		
 	
@@ -764,6 +790,21 @@ $meta_boxes[] = array(
 
 	'fields' => array(
 	
+		
+		array(
+			'name'     => __( 'Enable/ Disable Date Section', 'dogmawp' ),
+			'id'   => $prefix . 'wr-infor-date',
+			'type'     => 'radio',
+			// Array of 'value' => 'Label' pairs for select box
+			'options'  => array(
+				'st1' => esc_attr__( 'Enable', 'dogmawp' ),
+				'st2' => esc_attr__( 'Disable', 'dogmawp' ),
+			),
+			// Select multiple values, optional. Default is false.
+			'std'         => 'st1',
+
+		),	
+		
 		array(
 			'name'     => __( 'Enable/ Disable Info Section', 'dogmawp' ),
 			'id'   => $prefix . 'wr-infor-dis',

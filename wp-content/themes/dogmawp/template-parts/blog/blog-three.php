@@ -38,7 +38,7 @@
 											<?php if(get_post_meta($post->ID,'rnr_bl-video',true)):?>
 											<div class="blog-media">
                                             <div class="resp-video">
-                                            
+                                             <iframe src="<?php echo esc_url(get_post_meta($post->ID,'rnr_bl-video',true));?>"></iframe>
                                              </div>
                                             </div>
 											<?php endif;?>
@@ -61,7 +61,7 @@
 												echo esc_html($excerpt);
 												?>..
                                                 </p>
-                                                <a href="<?php the_permalink();?>" class="ajax btn anim-button   trans-btn   transition  fl-l" target="_blank"><span><?php esc_attr_e('read  more','dogmawp');?></span><i class="fa fa-long-arrow-right"></i></a>
+                                                <a href="<?php the_permalink();?>" class="ajax btn anim-button   trans-btn   transition  fl-l" target="_blank"><span><?php esc_attr_e('read  more','dogmawp');?></span><i class="fa fa-eye"></i></a>
                                             </div>
                                         </article>
                                     </div>

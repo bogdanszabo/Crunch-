@@ -488,22 +488,6 @@ function initDogma() {
     });
 // Init your functions here ------------------
 jQuery('#s').attr('placeholder','Type and hit enter...');
-jQuery(".wr-widget-main li a").each(function(i){
-jQuery(this).addClass('ajax');
-})
-jQuery(".widget_tag_cloud a").each(function(i){
-jQuery(this).addClass('ajax');
-})
-jQuery(".taglist a").each(function(i){
-jQuery(this).addClass('ajax');
-})
-jQuery(".comment-reply-link").each(function(i){
-jQuery(this).addClass('ajax');
-})
-
-jQuery(".nav-inner nav li a").each(function(i){
-jQuery(this).addClass('ajax');
-})
 jQuery('.wr-contact .full_section_inner > *').unwrap();
 jQuery('.wr-contact .wpb_row > *').unwrap();
 jQuery('.wr-contact .wpb_column > *').unwrap();
@@ -581,10 +565,13 @@ jQuery(function() {
 });
 function initmap () {
 }
+function initajaxload () {
+}
 
 // Init all functions  ------------------
 function readyFunctions() {
     initDogma();
     initvideo();
     initmap ();
+    initajaxload ();
 }

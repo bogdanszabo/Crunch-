@@ -243,12 +243,51 @@
                     // 'submenu' => false, // Setting submenu to false on a given section will hide it from the WordPress sidebar menu!
                     'fields' => array(
 
-                     array(
+                     
+					 array(
+							'id' => 'enableajax',
+							'type' => 'button_set',
+							'title' => esc_attr__('Enable Ajax Loading', 'dogmawp'),
+							'subtitle' => esc_attr__('If you Want to use visual comoser by default element and Addons then you need to disable ajax loading', 'dogmawp'),
+							'desc' => '',
+							'options' => array(
+									'yes'=> esc_attr__('Enable', 'dogmawp'),
+									'no' => esc_attr__('Disable', 'dogmawp'),
+									
+							),
+							'default'  => 'yes'
+					),
+					
+					array(
+							'id' => 'textlogo',
+							'type' => 'button_set',
+							'title' => esc_attr__('Select Logo Format', 'dogmawp'),
+							'subtitle' => esc_attr__('', 'dogmawp'),
+							'desc' => '',
+							'options' => array(
+									'st1'=> esc_attr__('Text Logo', 'dogmawp'),
+									'st2' => esc_attr__('Image Logo', 'dogmawp'),
+									
+							),
+							'default'  => 'st2'
+					),
+					 
+					 array(
 							'id' => 'logopic',
 							'type' => 'media',
 							'compiler' => 'true',
 							'title' => esc_attr__('Upload Logo', 'dogmawp'),
-							'subtitle' => esc_attr__('', 'dogmawp')
+							'subtitle' => esc_attr__('', 'dogmawp'),
+							'required' => array('textlogo', '=' , 'st2')
+					),
+					
+					array(
+							'id' => 'logotext',
+							'type' => 'text',
+							'title' => esc_attr__('Logo Text ', 'dogmawp'),
+							'subtitle' => esc_attr__('', 'dogmawp'),
+							'required' => array('textlogo', '=' , 'st1')
+					
 					),
 					
 					$fields = array(
@@ -291,7 +330,27 @@
 				
 				  )
                ) );
-
+			Redux::setSection( $opt_name, array(
+                    'icon'   => 'el-icon-idea',
+                    'title'  => esc_attr__( 'Menu Options', 'dogmawp' ),
+                    'fields' => array(
+					
+					array(
+							'id' => 'wrmenutype',
+							'type' => 'button_set',
+							'title' => esc_attr__('Select Menu Option', 'dogmawp'),
+							'subtitle' => esc_attr__('', 'dogmawp'),
+							'desc' => '',
+							'options' => array(
+									'yes'=> esc_attr__('Hover Menu', 'dogmawp'),
+									'no' => esc_attr__('Click Menu', 'dogmawp'),
+									
+							),
+							'default'  => 'yes'
+					),
+					
+                    )
+                ) );
 				
 				Redux::setSection( $opt_name, array(
                     'icon'   => 'el-icon-bullhorn',
@@ -601,7 +660,26 @@
 			                'style' => 'success',
 			                'title' => esc_attr__('Entry Headings', 'dogmawp'),
 			                'desc' => esc_attr__('Entry Headings in posts/pages', 'dogmawp')
-			            ),					
+			            ),
+
+						array(
+                            'id'          => 'logotextwr1',
+                            'type'        => 'typography', 
+                            'title'       => __('Text Logo', 'dogmawp'),
+                            'google'      => true, 
+                            'font-backup' => false,
+                            'output'      => array('.logotextwr'),
+                            'units'       =>'px',
+                            'subtitle'    => esc_attr__('Specify the Logo Text font properties.', 'dogmawp'),
+                            'default'     => array(
+                            'color'       => false,
+                            'font-style'  => false,
+                            'font-family' => false,
+                            'google'      => true,
+                            'font-size'   => false,
+                            'line-height' => false,
+                            ),
+						),
                         array(
                             'id'          => 'typography-h1',
                             'type'        => 'typography', 

@@ -71,6 +71,7 @@ if(! function_exists('wr_about_shortcode')){
 			'image'=>'',
 			'buttontext'=>'',
 			'buttonurl'=>'',
+			'urltype'=>'',
 			
 			
 			
@@ -83,10 +84,17 @@ if(! function_exists('wr_about_shortcode')){
         }else {
             $about_image = $image;
         }
+		
 
 		$html ='';
+		$ajaxclass ='';
 		
-		
+		if($urltype == "st2"){
+		$ajaxclass .= 'ajaxnot';
+		}
+		else{
+		$ajaxclass .= 'ajax';
+		}
 		$html .= '<div class="fixed-column">';
 		$html .= '<div class="bg" style="background-image:url('.$about_image.')" ></div>';
 		$html .= '</div>';
@@ -99,7 +107,7 @@ if(! function_exists('wr_about_shortcode')){
 		$html .= do_shortcode($content);
 		$html .= '</p>';
 		if($buttonurl != '') {
-		$html .= '<a href="'.$buttonurl.'" class="ajax btn anim-button   trans-btn   transition  fl-l" target="_blank"><span>'.$buttontext.'</span><i class="fa fa-long-arrow-right"></i></a>';
+		$html .= '<a href="'.$buttonurl.'" class="'.$ajaxclass.' btn anim-button   trans-btn   transition  fl-l" target="_blank"><span>'.$buttontext.'</span><i class="fa fa-eye"></i></a>';
 		}
 		$html .= '</div>';
 		$html .= '</section>';
