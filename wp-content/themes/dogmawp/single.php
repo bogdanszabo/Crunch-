@@ -63,6 +63,7 @@
 									<?php endif;?>
 									<?php endif;?>
                                     </div>
+
                                     <!--  blog-media  end--> 
                                     <!--  blog-text  --> 
                                     <div class="blog-text">

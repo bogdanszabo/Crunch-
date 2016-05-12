@@ -36,25 +36,6 @@ header {
 	text-decoration:none;
 }
 
-/*------   Miscelaneous  ------------------------------------------------------*/
-.l-line {
-	background:#1f1b1c;
-}
-.l-line span{
-	background:#f3601d;
-}
-.dec-text {
-	font-family:'Nunito';
-}
-.header-title h2:hover {
-	text-decoration: none;
-}
-.enter-wrap-holder {
-	left:50%;
-}
-.enter-wrap h4:hover {
-	text-decoration:none;
-}
 
 /*------ Contacts------------------------------------------------*/
 .contact-list li a {
@@ -73,19 +54,6 @@ header {
 	z-index:20;
 }
 
-/*------  footer ------------------------------------------------------*/
-footer {
-	background:#1f1b1c;
-}
-.footer-social li a span {
-	color: #fff;
-}
-.footer-social li a span:hover {
-	color:#f3601d;
-}
-.policy-box {
-	color: #fff;
-}
 
 /*------  portfolio ------------------------------------------------------*/
 .wh-info-box {
@@ -111,6 +79,14 @@ footer {
 }
 .gallery-item:hover  .wh-info-box {
 	opacity:0.8;
+}
+
+.filter-vis-line {
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    width: 100%;
 }
 .filter-vis-line  .gallery-filters {
 	background: none;
@@ -161,4 +137,54 @@ footer {
 }
 .cases a h4:hover{
 	color:#f3601d;
+}
+
+
+/*------   Miscelaneous  ------------------------------------------------------*/
+.l-line {
+	background:#1f1b1c;
+}
+.l-line span{
+	background:#f3601d;
+}
+.dec-text {
+	font-family:'Nunito';
+}
+.header-title h2:hover {
+	text-decoration: none;
+}
+.enter-wrap-holder {
+	left:50%;
+}
+.enter-wrap h4:hover {
+	text-decoration:none;
+}
+.wpmlpos #lang_sel_list a,
+.wpmlpos #lang_sel_list a:visited {
+	background: transparent;
+}
+#lang_sel_list ul a {
+	color: #fff;
+}
+#lang_sel_list a.lang_sel_sel {
+	color: gray;
+}
+.sfsi_widget {
+	clear: both;
+}
+
+
+/*------  footer ------------------------------------------------------*/
+footer {
+	background:#1f1b1c;
+	bottom: 0 !important;
+}
+.footer-social li a span {
+	color: #fff;
+}
+.footer-social li a span:hover {
+	color:#f3601d;
+}
+.policy-box {
+	color: #fff;
 }

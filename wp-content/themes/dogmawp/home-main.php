@@ -4,7 +4,7 @@
 /*Template Name:Home Page Template*/
  get_header();
  
- 
+pre(get_post_meta($post->ID,'rnr_wr_home_pagetype',true)); 
  ?>
  
  <?php if(get_post_meta($post->ID,'rnr_wr_home_pagetype',true)=='st2'){ ?> 
@@ -27,7 +27,12 @@
 		 <?php }
 		  else if(get_post_meta($post->ID,'rnr_wr_home_pagetype',true)=='st8'){ ?> 
          <?php get_template_part('template-parts/home/home-visiable-menu');?>
-		 <?php }
+		 <?php } 
+
+else if(get_post_meta($post->ID,'rnr_wr_home_pagetype',true)=='st9'){ ?>
+	<?php get_template_part('template-parts/home/home-visible-video');?>
+<?php }
+
 		 else  { ?>
 		 <?php get_template_part('template-parts/home/home-slide');?>
 		 <?php }?>
