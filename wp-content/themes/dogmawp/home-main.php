@@ -4,7 +4,6 @@
 /*Template Name:Home Page Template*/
  get_header();
  
-pre(get_post_meta($post->ID,'rnr_wr_home_pagetype',true)); 
  ?>
  
  <?php if(get_post_meta($post->ID,'rnr_wr_home_pagetype',true)=='st2'){ ?> 
