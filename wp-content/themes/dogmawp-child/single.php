@@ -67,12 +67,12 @@
                                     <!--  blog-media  end--> 
                                     <!--  blog-text  --> 
                                     <div class="blog-text">
-                                         <?php if(have_posts()) : while ( have_posts() ) : the_post();?>
+                                         <?php //if(have_posts()) : while ( have_posts() ) : the_post();?>
                                          
                                          <?php echo do_shortcode( '[DISPLAY_ULTIMATE_SOCIAL_ICONS]' ); // Ultimate social sharing buttons ?>
 
                                          <?php the_content();?>
-										<?php endwhile;  endif; wp_reset_postdata(); ?>
+										<?php //endwhile;  endif; wp_reset_postdata(); ?>
 										<?php
 										if( has_tag() ) {?>
                                         <div class="taglist">
@@ -81,6 +81,16 @@
 										<?php } else {?>
 										<?php }?>
                                     </div>
+
+                                    <?php if ( is_active_sidebar( 'sidebar-1' ) ) { ?>
+                                        <div class="sidebar gallery-item wr-full-height">
+                                            <?php
+                                            if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar')): 
+                                            endif;
+                                            ?>
+                                        </div>
+                                    <?php } ?>
+
                                     <!--  blog-text end --> 
                                     <?php comments_template(); ?>
                                    
