@@ -80,7 +80,9 @@ if ( 'div' == $args['style'] ) {
     <div class="comment-author">
     <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['avatar_size'] ); ?>
     </div>
+    
 	<cite class="fn"><?php printf(__('%s','dogmawp'), get_comment_author_link()) ?></cite>
+  
 	 <div class="comment-meta">
        <h6><a href="#"><?php comment_date('F j, Y \a\t g:i a'); ?></a> / <?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?></h6>
      </div>
